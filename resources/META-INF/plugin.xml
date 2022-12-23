@@ -1,17 +1,30 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>这是另一个插件项目</name>
-  <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <id>com.zhouhuajian.web.search</id>
+  <name>网页搜索</name>
+  <version>0.2</version>
+  <vendor email="zhouhuajian@company.com" url="http://www.company.com">某某公司</vendor>
 
   <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      <h1>网页搜索插件</h1>
+      <h2>插件介绍</h2>
+      <p>该插件能给你带来便捷的网页搜索功能。</p>
+      <p>支持的搜索引擎有：</p>
+      <ul>
+        <li>必应搜索</li>
+        <li>百度搜索</li>
+        <li>搜狗搜索</li>
+      </ul>
+      <h2>使用方式</h2>
+      <p>在编辑器或控制台，选中要搜索的内容，然后右键选择要使用的搜索引擎，就可以直接打开系统默认浏览器进行便捷的网页搜索。</p>
+      <h2>作者</h2>
+      <p>周华健</p>
     ]]></description>
 
   <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      <ul>
+        <li>2022-12-26 v0.2</li>
+        <li>2022-12-20 v0.1</li>
+      </ul>
     ]]>
   </change-notes>
 
