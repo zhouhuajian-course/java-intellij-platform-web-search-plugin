@@ -1,9 +1,11 @@
 package web.search;
 
+import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.editor.Caret;
+import com.intellij.util.io.URLUtil;
 import org.jetbrains.annotations.NotNull;
 
 public class WebSearchAction extends AnAction {
@@ -37,16 +39,28 @@ public class WebSearchAction extends AnAction {
             return;
         }
 
+        String url = null;
         switch (text) {
             case "必应搜索":
-                System.out.println("必应 " + selectedText);
+                // https://cn.bing.com/search?q=test
+                // https://cn.bing.com/search?q=%E6%B5%8B%E8%AF%95
+                // System.out.println("必应 " + selectedText);
+                url = "https://cn.bing.com/search?q=";  // query 查询
                 break;
             case "百度搜索":
-                System.out.println("百度 " + selectedText);
+                // https://www.baidu.com/s?wd=test
+                // https://www.baidu.com/s?wd=%E6%B5%8B%E8%AF%95
+                // System.out.println("百度 " + selectedText);
+                url = "https://www.baidu.com/s?wd=";  // word
                 break;
             case "搜狗搜索":
+                // https://sogou.com/web?query=test
+                // https://sogou.com/web?query=%E6%B5%8B%E8%AF%95
                 System.out.println("搜狗 " + selectedText);
+                url = "https://sogou.com/web?query=";
                 break;
         }
+        // BrowserUtil.browse("http://www.google.com/search?q=" + URLUtil.encodeURIComponent(term));
+        BrowserUtil.browse(url + URLUtil.encodeURIComponent(selectedText));
     }
 }
