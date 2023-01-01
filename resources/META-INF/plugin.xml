@@ -41,8 +41,9 @@
 
   <actions>
     <!-- 和 Swing Action 类别 -->
-    <group id="web.search.WebSearchActionGroup" text="网页搜索" popup="true">
+    <group id="web.search.WebSearchActionGroup" class="web.search.WebSearchActionGroup" text="网页搜索" popup="true">
       <add-to-group group-id="EditorPopupMenu" anchor="first"></add-to-group>
+      <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"></add-to-group>
       <action id="web.search.WebSearchAction1" class="web.search.WebSearchAction" text="必应搜索"></action>
       <action id="web.search.WebSearchAction2" class="web.search.WebSearchAction" text="百度搜索"></action>
       <action id="web.search.WebSearchAction3" class="web.search.WebSearchAction" text="搜狗搜索"></action>
